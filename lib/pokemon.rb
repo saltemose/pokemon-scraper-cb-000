@@ -26,5 +26,6 @@ class Pokemon
     type = pokemon[2]
 
     self.new(id: id, name: name, type: type, db: db)
+  end 
 
 end

@@ -11,6 +11,7 @@ class Pokemon
         @name = val
       else attr = "type"
         @type = val
+      end
     end
   end
 end

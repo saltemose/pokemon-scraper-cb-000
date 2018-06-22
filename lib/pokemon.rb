@@ -21,6 +21,15 @@ class Pokemon
 
   def self.find(id_num, db)
    pokemon_data = db.execute("SELECT * FROM pokemon where id = ?", id_num)
+   pokemon_data.each do |attr, val|
+     if attr = "id"
+       id = val
+     elsif attr = "name"
+       name = val
+     else attr = "type"
+       type = val
+     end
+    self.new(id: id, name: name, type: type, db: db)
   end
 
 end

@@ -1,15 +1,12 @@
 class Pokemon
   attr_accessor :id, :name, :type, :db
 
-  def initialize(db)
-    db.each do |attr, val|
-      if attr == "id:"
-        @id = val
-      elsif attr == "name:"
-        @name = val
-      else @type = val
-      end
-    end
+  def initialize(id:, name:, type:, db:)
+    @id = id
+    @name = name
+    @type = type
+    @db = db
+
   end
 
   def self.save(name, type, db)

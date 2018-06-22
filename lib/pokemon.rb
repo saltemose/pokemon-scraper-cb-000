@@ -1,3 +1,5 @@
+binding.pry
+
 class Pokemon
 
   attr_accessor :id, :name, :type, :db
@@ -19,6 +21,7 @@ class Pokemon
     db.execute("INSERT INTO pokemon (name, type) VALUES (?, ?)", name, type)
   end
 
-
+  def self.find(id_num, db)
+    pokemon_data = db.execute("SELECT * FROM pokemon where id = ?", id_num)
 
 end

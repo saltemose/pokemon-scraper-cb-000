@@ -29,8 +29,8 @@ class Pokemon
      else attr = "type"
        type = val
      end
-   end
     self.new(id: id, name: name, type: type, db: db)
+  end
   end
 
 end
